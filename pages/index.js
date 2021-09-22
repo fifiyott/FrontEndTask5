@@ -44,7 +44,7 @@ function handleSubmit(e) {
           quantity : formInput.quantity,
           price : formInput.price,
         }));
-      alert("data telah diedit");
+      alert("Data Berhasil Diedit..");
     }
     else{
     dispatch(
@@ -54,7 +54,7 @@ function handleSubmit(e) {
         price: formInput.price,
       })
     );
-    alert("penambahan data berhasil");
+    alert("Data Berhasil Tersimpan !");
   }
     setFormInput({title:"", price: "", quantity:""});
     setUpdateData({ id: null, status: false });

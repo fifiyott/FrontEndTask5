@@ -8,7 +8,7 @@ const List = (props) => {
   
     const handleDelete =()=>{
         dispatch(deleteList({id:list.id}),
-        alert("berhasil menghapus " + list.title));
+        alert(list.title + " " + "Berhasil Dihapus"));
     }
   
     return (

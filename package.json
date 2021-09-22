@@ -15,7 +15,7 @@
     "react-dom": "17.0.2",
     "react-redux": "^7.2.5",
     "redux": "^4.1.1",
-    "sass": "^1.42.0",
+    "sass": "^1.42.1",
     "uid": "^2.0.0"
   },
   "devDependencies": {
