@@ -5,21 +5,20 @@ import { useSelector } from 'react-redux';
 const FormList = (props) => {
     const { handleEdit, handleDelete } = props;
 
-    const formList = useSelector((state)=>state.formList);
+    const formList = useSelector((state)=>state.list);
 
     return (
        <div className="container">
-           return(
             {formList.map((list => {
+                return(
                     <List
                     list={list } 
                     handleEdit={handleEdit}
                     handleDelete={handleDelete}
                     key={list.id}
-                        />
-            }))}
-           )
-               
+                        />  
+                )
+            }))}      
        </div>
    );
 };

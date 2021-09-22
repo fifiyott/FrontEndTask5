@@ -62,12 +62,12 @@ function handleSubmit(e) {
 
   
   const handleEdit = (list) => {
-    setForm({
+    setFormInput({
       title: list.title,
       quantity: list.quantity,
       price: list.price,
     });
-    setUpdate({ id: list.id, status: true });
+    setUpdateData({ id: list.id, status: true });
   };
 
   return (
