@@ -7,16 +7,34 @@ const FormList = (props) => {
 
     const formList = useSelector((state)=>state.list);
 
+    const [ searchFilter, setSearchFilter ] = useState('');
     return (
-       <div className="container">
-            {formList.map((list => {
+        <div className="list-group">
+        <div className="list-header">
+            <h1 className="headerlist">List</h1>
+            <div className="filter-post">
+                <input type="text"
+                    className="filter"
+                    placeholder="Search"
+                    onChange={ (e) => {
+                    setSearchFilter(e.target.value);
+                    } }
+                />
+            </div>
+        </div>
+            {formList.filter((val) => {
+              if( searchFilter === "") {
+                return val;
+              } else if ( val.title.toLowerCase().includes(searchFilter.toLocaleLowerCase())) {
+                return val;
+              }
+            }).map((list => {
                 return(
                     <List
-                    list={list } 
+                    list={list} 
                     handleEdit={handleEdit}
                     handleDelete={handleDelete}
-                    key={list.id}
-                        />  
+                    key={list.id} />  
                 )
             }))}      
        </div>

@@ -36,12 +36,26 @@ header{
   margin: 0 auto; /*biar bikin ditengah*/
   width: 550px;
 }
+.input, .filter{
+  border-radius: 5px;
+  margin: 5px;
+  padding-left: 10px;
+}
 .input{
   border: 1.5px solid #57ceff;
-  border-radius: 5px;
   width: 500px;
   height: 40px;
-  margin: 5px;
+}
+.filter{
+  border: 2px solid #57ceff;
+  width: 200px;
+  height: 30px;
+}
+.list-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .btnSubmit{
   border: 1px solid #57ceff;
@@ -93,6 +107,7 @@ header{
   align-self: center;
   margin-right: 10px;
 }
+
 
 
 footer {
